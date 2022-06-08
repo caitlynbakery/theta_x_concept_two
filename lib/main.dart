@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
                   "THETA ",
                   style: TextStyle(fontFamily: 'KdamThmor', fontSize: 50),
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
-            Text(
+            const Text(
               "BUTTONS",
               style: TextStyle(fontFamily: 'Raleway', fontSize: 20),
             ),
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(fontFamily: 'Raleway'),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 48, 47, 45),
+                        primary: const Color.fromARGB(255, 48, 47, 45),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12))),
                   ),
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       var response =
                           await http.post(url, headers: header, body: bodyJson);
                       setState(() {
-                        message = "Taking Picture...";
+                        message = "Taking Picture...\n\n";
                       });
                     },
                     color: Colors.amber,
