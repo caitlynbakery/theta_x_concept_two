@@ -1,6 +1,6 @@
 # THETA X Buttons using State Management
 
-![screenshot](docs/screenshot.png)
+<img src="docs/screenshot.png" height=40%>
 
 This application connects to a RICOH THETA X camera with the http package from Dart and outputs the response to the screen using state management. It uses a Stateful widget and updates the outputted response inside of the `setState()` method.  
 
