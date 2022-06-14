@@ -4,9 +4,11 @@
 
 This application connects to a RICOH THETA X camera with the http package from Dart and outputs the response to the screen using state management. It uses a Stateful widget and updates the outputted response inside of the `setState()` method.  
 
-## State Management
+## State Management and Data Serialization 
 
-The first step to outputting the response is to create a String variable and pass it into a Widget. The variable for this application is called `message` and is reassigned whenever the application's state changes. I also formatted the response using `JsonEncoder` to convert the response. The `message` is assigned to this formatted response in the `setState()` method. 
+The first step to outputting the response is to create a String variable and pass it into a Widget. The variable for this application is called `message` and is reassigned whenever the application's state changes. The benefit of using state management in this application is to help make our app more scalable for the future. Although the Stateless
+
+I also formatted the response using `JsonEncoder` to convert the response. Data in Dart is held in a map that needs to be converted before we use it. Since the THETA X camera sends back a response in a JSON format, the application runs `jsonDecode` to convert it back into a Dart format. Once the response is in the Dart format, the application formats it with indentation. The `message` is assigned to this formatted response in the `setState()` method. 
 
 ```dart
 var encoder = JsonEncoder.withIndent('  ');
